@@ -10,9 +10,21 @@ package decorar_texto;
  * @author Carlos Loaeza
  */
 public abstract class Decorador extends Texto {
-    
+
     protected Texto iTexto;
-    
-    
-    
+
+    public Decorador(Texto iTexto) {
+        this.iTexto = iTexto;
+    }
+
+    @Override
+    public String getTexto() {
+        return iTexto.getTexto();
+    }
+
+    @Override
+    public void setTexto(String t) {
+
+    }
+
 }

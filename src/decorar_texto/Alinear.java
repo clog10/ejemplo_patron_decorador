@@ -12,6 +12,14 @@ package decorar_texto;
 public class Alinear extends Decorador{
 
     private char alinear;
+
+    public Alinear(Texto iTexto) {
+        super(iTexto);
+        texto = super.getTexto();
+        //System.out.println(texto);
+    }
+    
+    
     
     public void setAlinear(char ta){
         alinear=ta;
@@ -25,7 +33,8 @@ public class Alinear extends Decorador{
         if(alinear == 'C' || alinear == 'c'){
             numeroEspacios=(tamañoRenglon - texto.length())/2;
             for(int p=0; p<numeroEspacios ;p++){
-                t.concat(" ");
+                //t.concat(" ");
+                t+=" ";
             }
         }
         return t+texto;

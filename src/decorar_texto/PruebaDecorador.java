@@ -11,8 +11,8 @@ package decorar_texto;
  */
 public class PruebaDecorador {
     public static void main(String [] args){
-        Texto textob = new TextoC();
-        textob.setTexto("Ejemplo Decorador");
+        Texto textob = new TextoC("Ejemplo Decorador");
+        //textob.setTexto("Ejemplo Decorador");
 //        System.out.println("Texto -> "+textob.getTexto());
 //        
 //        Alinear a = new Alinear(textob);
@@ -27,6 +27,9 @@ public class PruebaDecorador {
     
         //Lo que vamos a hacer
         //Texto tv =  new Vertical(new Alinear(new Texto("")));
+        
+        Vertical v = new Vertical(new Alinear(new TextoC("Carlos")));
+        System.out.println(v.getTexto());
         
     }
 }

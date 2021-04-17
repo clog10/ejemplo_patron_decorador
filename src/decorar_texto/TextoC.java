@@ -11,6 +11,10 @@ package decorar_texto;
  */
 public class TextoC extends Texto{
 
+    public TextoC(String tex) {
+        texto = tex;
+    }
+    
     @Override
     public String getTexto() {
         return texto;

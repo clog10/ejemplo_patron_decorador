@@ -39,7 +39,13 @@ public class Alinea extends Decorador {
                 }
             }
         } else if (alinear == 'I' || alinear == 'i') {
-            t = texto;
+            for (String a : verticales) {
+                if (verticales.length == 1) {
+                    t = t + a;
+                } else {
+                    t = t + a + "\n";
+                }
+            }
         } else if (alinear == 'D' || alinear == 'd') {
             for (String a : verticales) {
                 numeroEspacios = tamañoRenglon - a.length();

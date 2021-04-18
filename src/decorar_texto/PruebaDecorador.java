@@ -33,17 +33,36 @@ public class PruebaDecorador {
         //Texto tv =  new Vertical(new Alinear(new Texto("")));
         System.out.println("Prueba Impresión Vertical");
         System.out.println("--------------------------------------------------------------------------------");
-        Vertical v = new Vertical(new Alinear(new TextoC("Entre los individuos, como entre las naciones, el respeto al derecho ajeno es la paz.")));
+        Texto v = new Vertical(new Alinear(new TextoC("Entre los individuos, como entre las naciones, el respeto al derecho ajeno es la paz.")));
         System.out.println(v.getTexto());
         System.out.println("--------------------------------------------------------------------------------");
 
         System.out.println("Prueba Impresión justificada");
         System.out.println("--------------------------------------------------------------------------------");
-        Justificar j = new Justificar(new Alinear(new TextoC("Los patrones de diseño son unas técnicas para resolver problemas comunes en el desarrollo de software y otros ámbitos referentes al diseño de interacción o interfaces. Un patrón de diseño resulta ser una solución a un problema de diseño. Para que una solución sea considerada un patrón debe poseer ciertas características. Una de ellas es que debe haber comprobado su efectividad resolviendo problemas similares en ocasiones anteriores. Otra es que debe ser reutilizable, lo que significa que es aplicable a diferentes problemas de diseño en distintas circunstancias.")));
+        Texto j = new Justificar(new Alinear(new TextoC("Los patrones de diseño son unas técnicas para resolver problemas comunes en el desarrollo de software y otros ámbitos referentes al diseño de interacción o interfaces. Un patrón de diseño resulta ser una solución a un problema de diseño. Para que una solución sea considerada un patrón debe poseer ciertas características. Una de ellas es que debe haber comprobado su efectividad resolviendo problemas similares en ocasiones anteriores. Otra es que debe ser reutilizable, lo que significa que es aplicable a diferentes problemas de diseño en distintas circunstancias.")));
         System.out.println(j.getTexto());
         System.out.println("--------------------------------------------------------------------------------");
         
+        System.out.println("Prueba Impresión Vertical Alineada al centro");
+        System.out.println("--------------------------------------------------------------------------------");
         
+        Texto avc = new Alinea(new TextoC(v.getTexto()),'c');
+        System.out.println(avc.getTexto());
+        System.out.println("--------------------------------------------------------------------------------");
+        
+        System.out.println("Prueba Impresión Vertical Alineada a la derecha");
+        System.out.println("--------------------------------------------------------------------------------");
+        
+        Texto avd = new Alinea(new TextoC(v.getTexto()),'d');
+        System.out.println(avd.getTexto());
+        System.out.println("--------------------------------------------------------------------------------");
+        
+        System.out.println("Prueba Impresión Vertical Alineada a la izquierda");
+        System.out.println("--------------------------------------------------------------------------------");
+        
+        Texto avi = new Alinea(new TextoC(v.getTexto()),'i');
+        System.out.println(avi.getTexto());
+        System.out.println("--------------------------------------------------------------------------------");
         
     }
 }

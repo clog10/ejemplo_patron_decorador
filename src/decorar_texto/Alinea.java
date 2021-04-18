@@ -25,20 +25,33 @@ public class Alinea extends Decorador {
         int tamañoRenglon = 80;
         int numeroEspacios = 0;
         String t = "";
+        String[] verticales = texto.split("\n");
         if (alinear == 'C' || alinear == 'c') {
-            numeroEspacios = (tamañoRenglon - texto.length()) / 2;
-            for (int p = 0; p < numeroEspacios; p++) {
-                t += " ";
+            for (String a : verticales) {
+                numeroEspacios = (tamañoRenglon - a.length()) / 2;
+                for (int p = 0; p < numeroEspacios; p++) {
+                    t += " ";
+                }
+                if (verticales.length == 1) {
+                    t = t + a;
+                } else {
+                    t = t + a + "\n";
+                }
             }
-            t = t + texto;
         } else if (alinear == 'I' || alinear == 'i') {
             t = texto;
         } else if (alinear == 'D' || alinear == 'd') {
-            numeroEspacios = tamañoRenglon - texto.length();
-            for (int p = 0; p < numeroEspacios; p++) {
-                t += " ";
+            for (String a : verticales) {
+                numeroEspacios = tamañoRenglon - a.length();
+                for (int p = 0; p < numeroEspacios; p++) {
+                    t += " ";
+                }
+                if (verticales.length == 1) {
+                    t = t + a;
+                } else {
+                    t = t + a + "\n";
+                }
             }
-            t = t + texto;
         }
         return t;
     }

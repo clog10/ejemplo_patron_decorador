@@ -28,16 +28,24 @@ public class Alinea extends Decorador {
         if (alinear == 'C' || alinear == 'c') {
             numeroEspacios = (tamañoRenglon - texto.length()) / 2;
             for (int p = 0; p < numeroEspacios; p++) {
-                //t.concat(" ");
                 t += " ";
             }
+            t = t + texto;
+        } else if (alinear == 'I' || alinear == 'i') {
+            t = texto;
+        } else if (alinear == 'D' || alinear == 'd') {
+            numeroEspacios = tamañoRenglon - texto.length();
+            for (int p = 0; p < numeroEspacios; p++) {
+                t += " ";
+            }
+            t = t + texto;
         }
-        return t + texto;
+        return t;
     }
 
     @Override
     public void setTexto(String t) {
-    
+
     }
 
 }

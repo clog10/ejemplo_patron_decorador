@@ -9,12 +9,12 @@ package decorar_texto;
  *
  * @author Carlos Loaeza
  */
-public class TextoC extends Texto{
+public class TextoC extends Texto {
 
     public TextoC(String tex) {
         texto = tex;
     }
-    
+
     @Override
     public String getTexto() {
         return texto;
@@ -22,7 +22,7 @@ public class TextoC extends Texto{
 
     @Override
     public void setTexto(String t) {
-        texto=t;
+        texto = t;
     }
-    
+
 }

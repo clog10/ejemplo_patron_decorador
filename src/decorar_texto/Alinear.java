@@ -9,40 +9,36 @@ package decorar_texto;
  *
  * @author Carlos Loaeza
  */
-public class Alinear extends Decorador{
+public class Alinear extends Decorador {
 
     private char alinear;
 
     public Alinear(Texto iTexto) {
         super(iTexto);
         texto = super.getTexto();
-        //System.out.println(texto);
     }
-    
-    
-    
-    public void setAlinear(char ta){
-        alinear=ta;
+
+    public void setAlinear(char ta) {
+        alinear = ta;
     }
-    
+
     @Override
     public String getTexto() {
-        int tamañoRenglon=80;
-        int numeroEspacios=0;
-        String t="";
-        if(alinear == 'C' || alinear == 'c'){
-            numeroEspacios=(tamañoRenglon - texto.length())/2;
-            for(int p=0; p<numeroEspacios ;p++){
-                //t.concat(" ");
-                t+=" ";
+        int tamañoRenglon = 80;
+        int numeroEspacios = 0;
+        String t = "";
+        if (alinear == 'C' || alinear == 'c') {
+            numeroEspacios = (tamañoRenglon - texto.length()) / 2;
+            for (int p = 0; p < numeroEspacios; p++) {
+                t += " ";
             }
         }
-        return t+texto;
+        return t + texto;
     }
 
     @Override
     public void setTexto(String t) {
-    
+
     }
-    
+
 }

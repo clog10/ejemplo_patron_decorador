@@ -18,15 +18,9 @@ public class Vertical extends Decorador {
 
     @Override
     public String getTexto() {
-//        String t = "";
-//        String[] bar = texto.split("(?=\\s)");
-//        for (int i = 0; i < bar.length; i++) {
-//            t += bar[i] + "\n";
-//        }
-//        return t;
         String t = texto;
-        t = t.replace(' ','\n');
-        
+        t = t.replace(' ', '\n');
+
         return t;
     }
 
